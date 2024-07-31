@@ -1,0 +1,305 @@
+.sellerdata{
+    color:rgb(255, 255, 255);
+}
+.handlisttop{
+    color:white;
+}
+.handlerslistdiv1in1{
+    
+    display: block;
+    overflow: hidden;
+    background-color: #333333;
+    position:fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+.rightside{
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    right: 2%;
+    /* align-self: flex-start; */
+    margin-left:0px;
+    border-radius: 25px;
+    width: 25%;
+    margin-top: 150px;
+    height: 560px;
+    /* float: right; */
+    display: inline-block;
+}
+.lefteside {
+    display: inline-block;
+    margin-left: 5% ;
+    margin-right: 15%;
+    background-color: rgba(113, 115, 115, 0);
+    width: 60%;
+  
+  }
+  .datajimain{
+    border: 1px solid black;
+    
+  }
+  .upb{
+    align-items: center;
+    border: none;
+    width: 90px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.upb:hover{
+  /* background-color: rgba(255, 255, 255, 0.074);
+  color: white; */
+  transform: scale(1.3) perspective(1px)
+  
+}
+
+
+.inn{
+  
+  max-width: fit-content;
+  margin-left: 30px;
+  margin-right: auto;
+  align-items: center;
+}
+.ubpdiv{
+  margin: 30px;
+}
+.muit1{
+  margin: 10px;
+}
+.dlt{
+    align-items: center;
+    border: none;
+    width: auto;
+    background-color: rgb(96, 0, 0);
+    color: aliceblue;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.dlt:hover{
+  background-color: rgb(209, 0, 0);
+}
+.edt{
+  align-items: center;
+  border: none;
+  width: auto;
+  background-color: rgb(21, 104, 0);
+  color: aliceblue;
+  margin-left: 10px;
+  padding-right: 8px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 10px; 
+}
+.edt:hover{
+  background-color: rgb(2, 161, 26);
+}
+.overlay{
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  background: rgba(33, 33, 33, 0.7);
+  z-index: -1;
+  opacity: 0;
+  transition: 1s;
+}
+.showoverlay{
+  opacity: 1;
+  z-index: 1;
+}
+.EditForm{
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%,-50%);
+  border-radius: 20px;
+  box-shadow:  0px 0px 10px 3px #919090;
+  transition: 1s;
+}
+.showEditForm {
+  top: 50%; 
+  z-index: 1;
+}
+.i1{
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  height: 35px;
+}
+.i2{
+  width: 100%;
+  margin-bottom: 30px;
+  height: 35px;
+}
+
+.pushb{
+  margin-top: 20px;
+  align-items: center;
+  background-color: #282828;
+  border: none;
+  color: white;
+  width: 90px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.pushb:hover{
+  /* background-color: rgba(255, 255, 255, 0.074);
+  color: white; */
+  transform: scale(1.3) perspective(1px)
+  
+}
+.xros{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 1px;
+  background-color: #fcfcfc;
+  transition: all 0.3s ease;
+
+
+
+}
+.xros:hover{
+  background-color: rgb(255, 255, 255);
+  transform: scale(2.2) perspective(1px);
+  color:red;
+}
+.p1{
+  margin-top: 2px; 
+  margin-bottom: 20px;
+  font-size: small;
+}
+.h4name{
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 690;
+  margin-top: 0px;
+}
+/* usdataafter.module.css */
+.querryParagraph {
+  width: 600px;
+  overflow: hidden; /* Hides overflowed content */
+  text-overflow: ellipsis; /* Adds the ellipsis */
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+
+.infopair {
+  height: 30px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center; /* Optional: to align items vertically in the center */
+}
+
+.infopair h4 {
+  margin-right: 5px; /* Adjust spacing as needed */
+}
+.infopair p {
+  margin-left: 5px; /* Adjust spacing as needed */
+}
+
+.infopairx{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: max-content; */
+}
+.p1{
+  margin-top: 2px; 
+  margin-bottom: 3px;
+  font-size: 30px;
+}
+.attendedbs{
+
+  margin-left: 40px;
+  margin-top: 10px;
+
+}
+.attendedb{
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  
+}
+.attendedb:hover{
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.infopairone{
+  height: max-content;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center; /* Optional: to align items vertically in the center */
+}
+
+.ttt{
+  margin-top: 0px;
+  margin-left: 10px;
+  width: "700px";
+  word-break: break-word;
+                    
+}
+
+
+
+.h4name{
+  align-self: first baseline;
+}
+.data{
+  background-color: #ffffff00;
+  margin-top: 100px;
+  /* margin-left: 120px;
+  margin-right: 20px ; */
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  color: white;
+  
+}
+.coursedetails{
+ 
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 8px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.courses{
+
+  box-shadow: rgba(95, 95, 95, 0.75) 0px 5px 15px;
+
+
+
+  background-color: #101010;
+  /* box-shadow: 4px 3px #4a4a4a; */
+  display: block;
+  border-radius: 10px;
+  /* margin-left: 60px; */
+  margin-top: 50px;
+  color: white;
+}
+.courses:hover{
+  cursor: pointer;
+}
+.rightside h6{
+  color: whitesmoke;
+  margin-left: 5%;
+}

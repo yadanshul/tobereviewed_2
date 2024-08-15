@@ -1,3 +1,6 @@
+/* .body , html{
+    background-color: #eeeeee;
+} */
 .conn{
 
     margin-right: 20px;
@@ -7,6 +10,7 @@
     
    
 }
+
 .logininfo{
     color: #ffffff;
 }
@@ -127,6 +131,7 @@ a:hover {
 
 .div2mainuser{
 align-items: center;
+
 }
 .div1in2mainuser{
     display: flex;
@@ -195,5 +200,8 @@ align-items: center;
     font-size: 25px;
     font-weight: 10;
     margin-top: 0px;
+    
+  }
+  .cardcontainerourproductshome{
     
   }

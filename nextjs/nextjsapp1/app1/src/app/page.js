@@ -493,31 +493,21 @@ export default function Home() {
                 </div>
                 <div className="colhome2">
                 <div>
-                    <button onClick={()=>{router.push("/products")}}> know more </button>
+                    <button onClick={()=>{router.push("/p_e")}}> know more </button>
                   </div>
                   <div className="pt">
                     <h2> Partners </h2>
                   </div>
                   <p>
                     {" "}
-                    Seeds: We will develop farm seeds that are optimum in
-                    agronomic and nutritional value properties. The seed
-                    products will find multiple applications. These numerous
-                    applications will able to diversify the current usage and
-                    reduce reliance on a few consumption patterns. We will be
-                    modifying the seeds with the latest technology routes.
+                    We are looking for partners who share similar values as that of ours. We are looking for expertise in plant breeding, seed multiplication, and seed marketing. We will be connecting with various partners as per the life cycle of our company. We are committed to be transparent in dealing with our partners and share the created value as per contribution to value creation.
                   </p>
                   <div className="inv">
                     <h2> Investors </h2>
                   </div>
                   <p>
                     {" "}
-                    Seeds: We will develop farm seeds that are optimum in
-                    agronomic and nutritional value properties. The seed
-                    products will find multiple applications. These numerous
-                    applications will able to diversify the current usage and
-                    reduce reliance on a few consumption patterns. We will be
-                    modifying the seeds with the latest technology routes.
+                    We are looking for partners who share similar values as that of ours. We are looking for expertise in plant breeding, seed multiplication, and seed marketing. We will be connecting with various partners as per the life cycle of our company. We are committed to be transparent in dealing with our partners and share the created value as per contribution to value creation.
                   </p>
                 </div>
                 

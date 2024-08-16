@@ -217,7 +217,7 @@
     text-align: start;
     padding: 2vmin;
     overflow: hidden; 
-    max-height: 50vmin;
+    max-height: 60vh;
     width: 18%;
   }
   
@@ -238,12 +238,16 @@
   
   .inner1 p, .inner2 p {
     color: rgb(255, 255, 255);
+    font-size: 1.5vh;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease-in-out; /* Fade in content */
   }
   
-  .inner1.expanded, .inner2.expanded {
+  .inner1.expanded {
     max-height: 80vmin; /* Set this high enough to accommodate the expanded content */
+  }
+  .inner2.expanded {
+    max-height: 90vmin; 
   }
   
   .inner1.expanded p, .inner2.expanded p {

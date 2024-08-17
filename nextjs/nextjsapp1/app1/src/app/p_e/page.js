@@ -174,7 +174,7 @@ const pe = () => {
 
             <div className="inner">
             <Image 
-              className="im"
+              className="imf"
               src={ard}
               />
             <h2>Partners</h2>
@@ -185,7 +185,7 @@ const pe = () => {
             </div>
             <div className="inner">
             <Image 
-              className="im"
+              className="imf"
                 src={pers}
               />
             <h2>Inversors</h2>

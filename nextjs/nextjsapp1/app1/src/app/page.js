@@ -8,7 +8,10 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";//for image optimization
 import crophome from "../../public/images/crophome.jpg"
 import pe from "../../public/images/pe.jpg"
-import NMN from '../../public/images/NMN.jpg'
+import oa from '../../public/images/oa.jpg'
+import cf from "../../public/images/cf.jpg"
+import hc from "../../public/images/hc.jpg"
+import hg from "../../public/images/hg.jpg"
 //import Loader from './loading'; 
 import CircularIndeterminate from './loading';
 import Enquiry from "./enq/enquiry";
@@ -273,8 +276,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="cardhome1">
-              <div className="cardcontenthome1">
+            <div className="cardhome2">
+              <div className="cardcontenthome2">
                 <h3> Our Purpose</h3>
                 <p>
                   At Farmer’s Legacy Biotech, we are excited about the limitless
@@ -285,8 +288,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="cardhome1">
-              <div className="cardcontenthome1">
+            <div className="cardhome3">
+              <div className="cardcontenthome3">
                 <h3> Our Values</h3>
                 <p>Our values define our actions, and we lead by LEAP.</p>
                 <button onClick={()=>{router.push("/about2")}}> know more</button>
@@ -304,7 +307,7 @@ export default function Home() {
             <div className="sustainablitycardcontainerhome">
               <div className="sustainablitycardhome">
                 <Image
-                  src={cardimg}
+                  src={cf}
                   style={{ width: "100%", height: "auto" }}
                 ></Image>
                 <div className="sustainablitycardcontenthome">
@@ -318,7 +321,7 @@ export default function Home() {
               </div>
               <div className="sustainablitycardhome">
                 <Image
-                  src={cardimg}
+                  src={hc}
                   style={{ width: "100%", height: "auto" }}
                 ></Image>
                 <div className="sustainablitycardcontenthome">
@@ -332,7 +335,7 @@ export default function Home() {
               </div>
               <div className="sustainablitycardhome">
                 <Image
-                  src={cardimg}
+                  src={hg}
                   style={{ width: "100%", height: "auto" }}
                 ></Image>
                 <div className="sustainablitycardcontenthome">

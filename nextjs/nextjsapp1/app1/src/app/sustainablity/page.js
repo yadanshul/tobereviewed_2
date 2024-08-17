@@ -11,6 +11,11 @@ import empathy from "../../../public/images/Empathy.webp"
 import ard from "../../../public/images/ard.webp"
 import pers from "../../../public/images/pers.webp"
 import Link from "next/link";
+import pe from "../../../public/images/pe.jpg"
+import oa from '../../../public/images/oa.jpg'
+import cf from "../../../public/images/cf.jpg"
+import hc from "../../../public/images/hc.jpg"
+import hg from "../../../public/images/hg.jpg"
 import "./sus.css";
 import Enquiry from "../enq/enquiry";
 
@@ -107,7 +112,7 @@ const sustainablity = () => {
         </div>
 
         <section className="hed14">
-            <p style={{color:"rgb(66, 66, 66)"}}>Canadian Legacy Biotech believes in developing technology for Planet, People, & Profit. We excel by challenging ourselves and by promoting human curiosity.</p>
+            <p className="pgf"style={{color:"rgb(66, 66, 66)"}}>Canadian Legacy Biotech believes in developing technology for Planet, People, & Profit. We excel by challenging ourselves and by promoting human curiosity.</p>
         </section>
 
 
@@ -119,7 +124,7 @@ const sustainablity = () => {
             <div className="inner1ss">
               <Image 
               className="imss"
-                src={leadership}
+                src={cf}
               />
                 <h2>Impact on Canadian Farmers</h2>
                 <p>
@@ -130,7 +135,7 @@ const sustainablity = () => {
             <div className="inner2ss">
               <Image 
               className="imss"
-              src={empathy}
+              src={hc}
               />
             <h2>Impact on Consumers</h2>
                 <p>
@@ -141,7 +146,7 @@ const sustainablity = () => {
             <div className="inner3ss">
               <Image 
               className="imss"
-                src={leadership}
+                src={hg}
               />
                 <h2>Impact on forthcoming generations</h2>
                 <p>

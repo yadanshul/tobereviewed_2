@@ -647,7 +647,39 @@ margin-top: 16px;
   margin: 20px;
   position: relative; /* Ensure child elements are positioned relative to this */
  
+  background-image: url("../../public/images/oa.jpg");
+  background-size: cover; /* Cover entire div */
+  background-position: center; /* Center the background image */
+  color: white; /* Text color for better visibility on image background */
+  overflow: hidden; /* Prevent content from overflowing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for better look */
+  width:20vw;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+.aboutushome .cardhome2 {
+ 
+  margin: 20px;
+  position: relative; /* Ensure child elements are positioned relative to this */
+ 
   background-image: url("../../public/images/NMN.jpg");
+  background-size: cover; /* Cover entire div */
+  background-position: center; /* Center the background image */
+  color: white; /* Text color for better visibility on image background */
+  overflow: hidden; /* Prevent content from overflowing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional shadow for better look */
+  width:20vw;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+.aboutushome .cardhome3 {
+ 
+  margin: 20px;
+  position: relative; /* Ensure child elements are positioned relative to this */
+ 
+  background-image: url("../../public/images/ovv.jpg");
   background-size: cover; /* Cover entire div */
   background-position: center; /* Center the background image */
   color: white; /* Text color for better visibility on image background */
@@ -670,16 +702,46 @@ margin-top: 16px;
   
   padding-top: 8px;
 }
+.aboutushome .cardhome2 .cardcontenthome2{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 16px;
+  
+  padding-top: 8px;
+}
+.aboutushome .cardhome3 .cardcontenthome3{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 16px;
+  
+  padding-top: 8px;
+}
 .aboutushome h1{
   color: rgb(15, 58, 20);
 }
-.aboutushome .cardcontainerhome1 .cardhome1 .cardcontenthome1 p{
+.aboutushome  .cardhome1 .cardcontenthome1 p{
   
   margin-top: 1.5rem;
   font-size: 2.5vmin;
   color: rgb(255, 255, 255);
  }
- .aboutushome .cardcontainerhome1 .cardhome1 .cardcontenthome1 h3{
+ .aboutushome  .cardhome2 .cardcontenthome2 p{
+  
+  margin-top: 1.5rem;
+  font-size: 2.5vmin;
+  color: rgb(255, 255, 255);
+ }
+ .aboutushome .cardhome3 .cardcontenthome3 p{
+  
+  margin-top: 1.5rem;
+  font-size: 2.5vmin;
+  color: rgb(114, 110, 110);
+ }
+ .aboutushome  .cardhome1 .cardcontenthome1 h3{
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -689,7 +751,49 @@ margin-top: 16px;
   color: rgb(116, 116, 116);
 
 }
-.aboutushome .cardcontainerhome1 .cardhome1 .cardcontenthome1 button{
+.aboutushome  .cardhome2 .cardcontenthome2 h3{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  font-size: 3vmin;
+  padding: 10px;
+  color: rgb(116, 116, 116);
+
+}
+.aboutushome  .cardhome3 .cardcontenthome3 h3{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  font-size: 3vmin;
+  padding: 10px;
+  color: rgb(116, 116, 116);
+
+}
+.aboutushome .cardhome1 .cardcontenthome1 button{
+  border: none;
+  margin: 8%;
+  border-radius: 30px;
+  padding: 1.5vmin;
+ cursor: pointer;
+  border-color: whitesmoke;
+  background-color: #171717a6;
+  color: rgb(255, 255, 255);
+
+}
+.aboutushome .cardhome2 .cardcontenthome2 button{
+  border: none;
+  margin: 8%;
+  border-radius: 30px;
+  padding: 1.5vmin;
+ cursor: pointer;
+  border-color: whitesmoke;
+  background-color: #171717a6;
+  color: rgb(255, 255, 255);
+
+}
+.aboutushome  .cardhome3 .cardcontenthome3 button{
   border: none;
   margin: 8%;
   border-radius: 30px;

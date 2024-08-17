@@ -51,7 +51,7 @@ const about2 = () => {
                   className="btonhome"
                   onClick={() => router.push("/")}
                 >
-                  home
+                  Home
                 </button>
               </li>
              
@@ -68,7 +68,7 @@ const about2 = () => {
                   className="btonhome"
                   onClick={() => router.push(`../innovation`)}
                 >
-                  innovation
+                  Innovation
                 </button>
               </li>
               <li>
@@ -76,7 +76,7 @@ const about2 = () => {
                   className="btonhome"
                   onClick={() => router.push(`../sustainablity`)}
                 >
-                  sustainablity
+                  Sustainablity
                 </button>
               </li>
               <li>

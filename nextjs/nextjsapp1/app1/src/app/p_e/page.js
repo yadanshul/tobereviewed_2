@@ -51,7 +51,7 @@ const pe = () => {
                   className="btonhome"
                   onClick={() => router.push("/")}
                 >
-                  home
+                  Home
                 </button>
               </li>
               <li>
@@ -59,7 +59,7 @@ const pe = () => {
                   className="btonhome"
                   onClick={() => router.push("/about2")}
                 >
-                  about
+                  About
                 </button>
               </li>
               <li>
@@ -75,7 +75,7 @@ const pe = () => {
                   className="btonhome"
                   onClick={() => router.push(`../innovation`)}
                 >
-                  innovation
+                  Innovation
                 </button>
               </li>
               <li>
@@ -83,7 +83,7 @@ const pe = () => {
                   className="btonhome"
                   onClick={() => router.push(`../sustainablity`)}
                 >
-                  sustainablity
+                  Sustainablity
                 </button>
               </li>
               

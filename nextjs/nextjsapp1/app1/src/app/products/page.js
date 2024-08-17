@@ -52,7 +52,7 @@ const router=useRouter();
                     className="btonhome"
                     onClick={() => router.push("/")}
                   >
-                    home
+                    Home
                   </button>
                 </li>
                 <li>
@@ -60,7 +60,7 @@ const router=useRouter();
                     className="btonhome"
                     onClick={() => router.push("/about2")}
                   >
-                    about
+                    About
                   </button>
                 </li>
                 
@@ -69,7 +69,7 @@ const router=useRouter();
                     className="btonhome"
                     onClick={() => router.push(`../innovation`)}
                   >
-                    innovation
+                    Innovation
                   </button>
                 </li>
                 <li>
@@ -77,7 +77,7 @@ const router=useRouter();
                     className="btonhome"
                     onClick={() => router.push(`../sustainablity`)}
                   >
-                    sustainablity
+                    Sustainablity
                   </button>
                 </li>
                 <li>

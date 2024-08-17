@@ -198,7 +198,7 @@ export default function Home() {
                   className="btonhome"
                   onClick={() => router.push("/about2")}
                 >
-                  about
+                  About
                 </button>
               </li>
 
@@ -215,7 +215,7 @@ export default function Home() {
                   className="btonhome"
                   onClick={() => router.push(`../innovation`)}
                 >
-                  innovation
+                  Innovation
                 </button>
               </li>
               <li>
@@ -223,7 +223,7 @@ export default function Home() {
                   className="btonhome"
                   onClick={() => router.push(`../sustainablity`)}
                 >
-                  sustainablity
+                  Sustainablity
                 </button>
               </li>
               <li>
@@ -256,10 +256,10 @@ export default function Home() {
               FLB Introducing Brahmola for Better, Healthy and Sustainable World
             </p>
             <p className="ppp">
-              dsnfksjdfsnfjknsfjjfdnffkjdknkdsjnfkjdfnjdnfdnfdsjfndsfnkjdsfnkjsdfn
+              We excel by challenging ourselves and by promoting human curiosity 
             </p>
             <p className="ppp">
-              0000000000000000000000000000000000000000000000
+              INNOVATION BIOTECH COMPANY
             </p>
           </div>
         </div>

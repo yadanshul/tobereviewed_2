@@ -51,7 +51,7 @@ const innovation = () => {
                   className="btonhome"
                   onClick={() => router.push("/")}
                 >
-                  home
+                  Home
                 </button>
               </li>
               <li>
@@ -59,7 +59,7 @@ const innovation = () => {
                   className="btonhome"
                   onClick={() => router.push("/about2")}
                 >
-                  about
+                  About
                 </button>
               </li>
               <li>
@@ -76,7 +76,7 @@ const innovation = () => {
                   className="btonhome"
                   onClick={() => router.push(`../sustainablity`)}
                 >
-                  sustainablity
+                  Sustainablity
                 </button>
               </li>
               <li>

@@ -48,7 +48,7 @@ const sustainablity = () => {
                   className="btonhome"
                   onClick={() => router.push("/")}
                 >
-                  home
+                  Home
                 </button>
               </li>
               <li>
@@ -56,7 +56,7 @@ const sustainablity = () => {
                   className="btonhome"
                   onClick={() => router.push("/about2")}
                 >
-                  about
+                  About
                 </button>
               </li>
               <li>
@@ -72,7 +72,7 @@ const sustainablity = () => {
                   className="btonhome"
                   onClick={() => router.push(`../innovation`)}
                 >
-                  innovation
+                  Innovation
                 </button>
               </li>
               

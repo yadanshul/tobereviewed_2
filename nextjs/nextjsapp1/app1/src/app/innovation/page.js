@@ -35,14 +35,14 @@ const innovation = () => {
                 style={{ fontFamily: "Open Sans", color: "white" }}
               >
                 {" "}
-                Oilcompxyz
+                FLB
               </h2>
               <p
                 className="cbheading"
                 style={{ fontFamily: "Open Sans", color: "white" }}
               >
                 {" "}
-                Researh abc{" "}
+                farmerlegacybiotech{" "}
               </p>
             </div>
             <ul className="ulhometop">

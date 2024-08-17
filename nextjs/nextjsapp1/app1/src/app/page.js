@@ -36,44 +36,23 @@ export default function Home() {
     localStorage.removeItem("user");
     setSession(null);
     router.push("/");
-    router.refresh();  //not necessary
+    router.refresh();  
   }
   function signout () {
     localStorage.removeItem("user");
     setSession(null);
     router.push("/");
-    router.refresh();  //not necessary
+    router.refresh();  
   }
   
-  // const [courses, setcourses] = useState([]);
   const [token_to_dif_u_s, set_token_to_dif_u_s] = useState(null)
   const [session, setSession] = useState(null);
-  const [loading, setLoading] = useState(true); // this loading is for ssr loading 
-  // for csr like fetch requests we have to make some custom loadings 
-  // like if fetch request is in process we will make it true else false ;
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch("http://127.0.0.1:4000/home/");
-  //       if (!response.ok) {
-  //         alert("Failed to fetch courses")
-  //         router.push("/")
-  //       }
-  //       const data = await response.json();
-  //       setcourses(data.courses); 
-  //       // console.warn(data);
-  //     } catch (error) {
-  //       console.error("Error fetching courses:", error);
-  //     }
-  //   };
-    
-  //     fetchData();
-      
+  const [loading, setLoading] = useState(true); 
+ 
     
     
-  // }, []);
+
   const [name, setname] = useState(null);
-  // const [sellername, setsellername] = useState(null);
   const [company, setcompany] = useState(null);
   const [location, setlocation] = useState(null);
   const [email, setemail] = useState(null);
@@ -154,15 +133,9 @@ export default function Home() {
     document.getElementById("outlined-basic-4").value = "";
     document.getElementById("outlined-basic-5").value = "";
   }
-  // const session = localStorage.getItem("user");
   useEffect(() => {
     if (typeof window === 'undefined') {
-      //if window is undefined means ssr is running and not csr, so don't access localstorage
-      // and keep loading true
-      ////// but due to loading we wont get the ssr loaded page (which is the advantage of Next.js's ssr)   
-      ////// to get that advantage we have to remove loading logic but loading is good as ssr return generic data only if we use headers instead of cookies
-      ////// but if we will use cookies in upcomming modifications we will use ssr rendered pages instaed of loading page 
-    }else{
+     }else{
       user = localStorage.getItem("user");
       if (user) {
         setSession(JSON.parse(user)); // Assuming user is a JSON stringified object
@@ -173,30 +146,7 @@ export default function Home() {
     }
     
   
-    // explainantion
-
-    // useEffect(() => {
-    //   // effect logic
-    // }, []);
-    // The first argument is a function (the effect) that contains the logic you want to run.
-    // The second argument is an array of dependencies. An empty array [] means the effect runs only once, after the initial render.
-
-    // if (typeof window !== 'undefined') {
-    //   // client-side logic
-    // }
-    // typeof window !== 'undefined' is a check to determine if the code is running in a browser environment (client-side) rather than on the server.
-    // In server-side rendering (SSR) or during the initial server-side rendering in Next.js, window is not defined. This check ensures that the code inside the if block runs only on the client side.
-
-    // const user = localStorage.getItem("user");
-    // localStorage is a Web API available only in the browser.
-    // localStorage.getItem("user") retrieves the value associated with the key "user" from localStorage. If there is no such key, it returns null.
-
-
-    // setSession(user);
-    // setSession is a state setter function returned by useState.
-    // It updates the session state variable with the value retrieved from localStorage.
-    // If a user is found in localStorage, session will be set to that value. Otherwise, it will be set to null.
-    
+   
 
 
 
@@ -205,13 +155,11 @@ export default function Home() {
 
   },[]);
 
-  // if (loading) {
-  //   return <Loader />;  // Display the loading component while loading
-  // }
+  
 
 
   if (loading) {
-    return <CircularIndeterminate />;  // Display the loading component while loading
+    return <CircularIndeterminate />;  
   }
 
 
@@ -231,45 +179,17 @@ export default function Home() {
                 style={{ fontFamily: "Open Sans", color: "white" }}
               >
                 {" "}
-                Oilcompxyz
+                FLB
               </h2>
               <p
                 className="cbheading"
                 style={{ fontFamily: "Open Sans", color: "white" }}
               >
                 {" "}
-                Researh abc{" "}
+                farmerlegacybiotech{" "}
               </p>
             </div>
             <ul className="ulhometop">
-              {/* <li>
-                {!session ? (
-                  <button
-                    className="btonhome"
-                    onClick={() => router.push("/login/users")}
-                  >
-                    login
-                  </button>
-                ) : (
-                  <button className="btonhome" onClick={logout}>
-                    logOut
-                  </button>
-                )}
-              </li>
-              <li>
-                {!session ? (
-                  <button
-                    className="btonhome"
-                    onClick={() => router.push("/signup/user")}
-                  >
-                    signup
-                  </button>
-                ) : (
-                  <button className="btonhome" onClick={signout}>
-                    signOut
-                  </button>
-                )}
-              </li> */}
               <li>
                 <button
                   className="btonhome"
@@ -320,44 +240,12 @@ export default function Home() {
                   Team
                 </button>
               </li>
-              {/* <li>
-                {session ? (
-                  <button
-                    className="btonhomeuser"
-                    onClick={() =>
-                      token_to_dif_u_s == "s"
-                        ? router.push(
-                            `../dataAfterSignupAndLogin/sellerdataafterSignedOrLoggedin/${session.id}`
-                          )
-                        : router.push(
-                            `../dataAfterSignupAndLogin/userdataafterSignedOrLoggedin/${session.id}`
-                          )
-                    }
-                  >
-                    {session.name}
-                  </button>
-                ) : (
-                  <></>
-                )}
-              </li> */}
+              
             </ul>
           </div>
         </div>
 
-        {/* 1,2 common */}
-        {/* <div className="introheader">
-        <div className="card">
-          <div className="slide" >
-            <p>FLB Introducing Brahmola for Better, Healthy and Sustainable World</p>
-          </div>
-          <div className="slide" >
-            <p>Slide 2 Text</p>
-          </div>
-          <div className="slide" >
-            <p>Slide 3 Text</p>
-          </div>
-        </div>
-      </div> */}
+        
 
         <div className="introheader">
           <div className="cardd">
@@ -381,7 +269,7 @@ export default function Home() {
                 <h3>Our Aim</h3>
                 <p>New challenges and using novel technologies</p>
                 <button onClick={()=>{router.push("/about2")}}> know more</button>
-                {/* <div className="bgimgblr"></div> */}
+                
               </div>
             </div>
 
@@ -393,7 +281,7 @@ export default function Home() {
                   possibility...
                 </p>
                 <button onClick={()=>{router.push("/about2")}}> know more</button>
-                {/* <div className="bgimgblr"></div> */}
+               
               </div>
             </div>
 
@@ -402,7 +290,7 @@ export default function Home() {
                 <h3> Our Values</h3>
                 <p>Our values define our actions, and we lead by LEAP.</p>
                 <button onClick={()=>{router.push("/about2")}}> know more</button>
-                {/* <div className="bgimgblr"></div> */}
+                
               </div>
             </div>
           </div>
@@ -529,11 +417,7 @@ export default function Home() {
               challenges excite us at Farmer’s Legacy Biotech.
             </p>
           </div>
-          {/* <div className="colll2">
-              <h3>IMPORTANT LINKS</h3>
-                  <p>Technology is evolving, so is the threat from global climate change. New challenges and using novel technologies to solve these challenges excite us at Farmer’s Legacy Biotech.</p>
-                 
-              </div> */}
+         
           <div className="colll3">
             <h3>GET IN TOUCH</h3>
             <div>

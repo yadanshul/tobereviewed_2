@@ -679,7 +679,7 @@ margin-top: 16px;
   margin: 20px;
   position: relative; /* Ensure child elements are positioned relative to this */
  
-  background-image: url("../../public/images/ovv.jpg");
+  background-image: url("../../public/images/ovalues.png");
   background-size: cover; /* Cover entire div */
   background-position: center; /* Center the background image */
   color: white; /* Text color for better visibility on image background */
@@ -739,7 +739,7 @@ margin-top: 16px;
   
   margin-top: 1.5rem;
   font-size: 2.5vmin;
-  color: rgb(114, 110, 110);
+  color: rgb(255, 255, 255);
  }
  .aboutushome  .cardhome1 .cardcontenthome1 h3{
   align-items: center;

@@ -11,6 +11,8 @@ import pe from "../../public/images/pe.jpg"
 import oa from '../../public/images/oa.jpg'
 import cf from "../../public/images/cf.jpg"
 import hc from "../../public/images/hc.jpg"
+import ovalues from "../../public/images/ovalues.png"
+
 import hg from "../../public/images/hg.jpg"
 //import Loader from './loading'; 
 import CircularIndeterminate from './loading';

@@ -189,7 +189,7 @@ const about2 = () => {
               className="imab"
                 src={pers}
               />
-            <h2>persistent</h2>
+            <h2>Persistent</h2>
                 <p>
                 At Farmer’s Legacy Biotech, we are excited about the limitless possibility technology can offer for a better future.  We are a forward-thinking company that pride itself by working to address the challenges faced by Canadian Farmers. We drive our purpose from the challenges faced by Canadian farmers and use biotechnology to address these challenges. We will focus on finding inefficiencies in agriculture and develop solutions for them.
                 <br></br> <br></br>   Technology is evolving, so is the threat from global climate change. New challenges and using novel technologies to solve these challenges excite us at Farmer’s Legacy Biotech.

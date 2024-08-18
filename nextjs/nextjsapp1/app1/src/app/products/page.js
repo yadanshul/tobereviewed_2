@@ -126,37 +126,50 @@ const router=useRouter();
             </div>
 
         </section>
-        <div className="row">
+        {/* <div className="row">
             <div className="col">
-                <Image src={oilll} className="imggg">
-
-                </Image>
-                <h4 className="prodhead">
-                Frying Oil                                       
-                </h4>
-                <p className="para">
-                Brahmola balanced SFA, MUFA and PUFA profile and resistant against oxidation make it suitable for deep frying application. Brahmola is healthy deep frying Oil. You do not need to compromise on oil quality for good taste.
-                </p>
+                <Image src={oilll} className="imggg"></Image>
+                <h4 className="prodhead">Frying Oil</h4>
+               
+                  <p className="para1">Brahmola balanced SFA, MUFA and PUFA profile and resistant against oxidation make it suitable for deep frying application.
+                  </p>
+                  <p className="para1">Brahmola is healthy deep frying Oil. You do not need to compromise on oil quality for good taste.
+                  </p>
+                
+                
             </div>
             <div className="col">
-                <Image src={milk} className="imggg">
-
-                </Image>
-                <h4 className="prodhead">
-                Infant Formula
-                    
-                </h4>
-                <p className="para">
-                        FLB Proprietary Blend comprising of 80% Brahmola and 20% other Canadian Oil with  balanced SFA, MUFA and PUFA profile make it ideal Oil to be used for Infant formula Application simplifying current practice of using Palm Oil, Sunflower Oil and Soyabean Oil blend. FLB proprietary blend negligible 3-MCPD and GE content is safe for children and keep the consumption level below safety limits for the infants solely feeding on infant 
+                <Image src={milk} className="imggg"></Image>
+                <h4 className="prodhead">Infant Formula</h4>
+                <p className="para2">FLB Proprietary Blend comprising of 80% Brahmola and 20% other Canadian Oil with  balanced SFA, MUFA and PUFA profile make it ideal Oil to be used for Infant formula Application simplifying current practice of using Palm Oil, Sunflower Oil and Soyabean Oil blend.  
+                </p>
+                <p className="para2">FLB proprietary Blend negligible 3-MCPD and GE content is safe for children and keep the consumption level below safety limits for the infants solely feeding on infant.
+                </p>
+            </div>
+            
+        </div> */}
+      <div className="row">
+            <div className="col">
+                <Image src={oilll} className="imggg"></Image>
+                <h4 className="prodhead">Frying Oil</h4>
+               
+                  <p className="para1">Brahmola balanced SFA, MUFA and PUFA profile and resistant against oxidation make it suitable for deep frying application.
+                  </p>
+                  <p className="para1">Brahmola is healthy deep frying Oil. You do not need to compromise on oil quality for good taste.
+                  </p>
+                
+                
+            </div>
+            <div className="col">
+                <Image src={milk} className="imggg"></Image>
+                <h4 className="prodhead">Infant Formula</h4>
+                <p className="para2">FLB Proprietary Blend comprising of 80% Brahmola and 20% other Canadian Oil with  balanced SFA, MUFA and PUFA profile make it ideal Oil to be used for Infant formula Application simplifying current practice of using Palm Oil, Sunflower Oil and Soyabean Oil blend.  
+                </p>
+                <p className="para2">FLB proprietary Blend negligible 3-MCPD and GE content is safe for children and keep the consumption level below safety limits for the infants solely feeding on infant.
                 </p>
             </div>
             
         </div>
-        {/* <div className="enquirybtndiv">
-              <button className="enquirybtn"onClick={()=>{router.push("../contact")}}>
-                Enquiry
-              </button>
-            </div> */}
 
 
             <div className="info">

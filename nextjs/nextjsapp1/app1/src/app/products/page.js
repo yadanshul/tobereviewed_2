@@ -42,7 +42,7 @@ const router=useRouter();
                 style={{ fontFamily: "Open Sans", color: "white" }}
               >
                 {" "}
-                farmerlegacybiotech{" "}
+                Farmer Legacy  Biotech{" "}
               </p>
             </div>
         
@@ -106,7 +106,7 @@ const router=useRouter();
         <div className="headercontent">
           <h2>Products we are offering</h2>
           <div className="line"></div>
-          <h1>barmohla xyz</h1>
+          {/* <h1>barmohla </h1> */}
           <center>
               <div className="headerproddata">
               <p>

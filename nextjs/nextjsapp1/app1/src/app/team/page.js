@@ -28,7 +28,7 @@ const Team = () => {
             FLB
             </h2>
             <p className="cbheading" style={{ fontFamily: "Open Sans", color: "white" }}>
-            farmerlegacybiotech
+            Farmer Legacy  Biotech
             </p>
           </div>
           <ul className="ulhometop">

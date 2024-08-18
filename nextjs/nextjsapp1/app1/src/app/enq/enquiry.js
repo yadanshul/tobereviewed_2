@@ -278,10 +278,10 @@ const Enquiry = () => {
                 </div>
                 <div className="btns">
                     <div>
-                    <button style={{backgroundColor:"rgb(66,66,66)" , color :"white"}} onClick={load}>post</button>
+                    <button style={{backgroundColor:"rgb(66,66,66)" , color :"white"}} onClick={load}>Post</button>
                     </div>
                     <div>
-                    <button  style={{backgroundColor:"rgb(66,66,66)" , color :"white"}} onClick={resett}>reset</button>
+                    <button  style={{backgroundColor:"rgb(66,66,66)" , color :"white"}} onClick={resett}>Reset</button>
                     </div>
                 </div>
                 </div>

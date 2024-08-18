@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .headercontent{
     color: rgb(255, 255, 255);
     text-align: center;
@@ -136,6 +137,7 @@ section{
     transition: transform .2s;
     
 }
+
 .col:hover{
     transform: scale(1.2);
 }
@@ -143,13 +145,106 @@ section{
     width: 100%;
     height: auto;
 }
+/* .prodhead{
+    color: rgb(66, 66, 66);
+    font-size: 3vmin;
+    margin: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+
+
+/* /////////// animation */
+/*
+.col{
+    width:325px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    height: 65vh;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.179);
+    margin: 20px;
+    transition: transform .2s;
+    
+}
+ .para1{
+    color: rgb(66, 66, 66);
+    padding: 10px;
+    position: absolute;
+    width: 20vw;
+    opacity: 0; 
+    font-size: 1.7vmin;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.para2{
+    color: rgb(66, 66, 66);
+    padding: 10px;
+    position: absolute;
+    width: 20vw;
+    font-size: 1.7vmin;
+    opacity: 0; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+/* 
+  .hiddenn {
+    opacity: 1;
+  }
+  @keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+  
+  
+  .col .para1:nth-child(3) {
+    animation: fadeInOut 14s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s; 
+}
+
+.col .para1:nth-child(4) {
+    animation: fadeInOut 14s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 9s; 
+}
+
+.col .para2:nth-child(3) {
+    animation: fadeInOut 14s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s; 
+}
+
+.col .para2:nth-child(4) {
+    animation: fadeInOut 14s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 9s; 
+} */
+
 .prodhead{
     color: rgb(66, 66, 66);
     font-size: 3vmin;
     margin: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.para{
+
+.para1{
+    color: rgb(66, 66, 66);
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.para2{
+    color: rgb(66, 66, 66);
     color: rgb(66, 66, 66);
     padding: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

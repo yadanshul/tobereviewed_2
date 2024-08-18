@@ -148,7 +148,7 @@ const sustainablity = () => {
               className="imss"
                 src={hg}
               />
-                <h2>Impact on forthcoming generations</h2>
+                <h2>Impact on Forthcoming Generations</h2>
                 <p>
                 We are looking for solutions that will able to reduce energy and resource consumption. Currently, we are reliant on processes to make modified products that involve high energy consumption. Our goal is to use bioreactors to produce those modified products and reduce our reliance on non-renewable sources so that we have resources left for our future generations.<br></br> <br></br>  
                 </p>

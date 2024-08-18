@@ -189,7 +189,7 @@ export default function Home() {
                 style={{ fontFamily: "Open Sans", color: "white" }}
               >
                 {" "}
-                farmerlegacybiotech{" "}
+                Farmer Legacy  Biotech{" "}
               </p>
             </div>
             <ul className="ulhometop">

@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+.main{
+    background-color: white;
+}
 .header{
     width:100vw;
     height: 100vh;
@@ -55,15 +58,25 @@
     left: 0;
     display: flex;
     width: 100%;
-    height: 0;
+    height: fit-content;
     justify-content: space-between;
     padding: 20px;
+    padding-right: 0;
+    padding-top: 10px;
     color: whitesmoke;
 
 }
 ul{
-    margin-top: 20px;
-    list-style: none;
+    margin-top: 0px;
+  margin-left: 0px;
+  padding-right: 20px;
+  list-style-type: none;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+
+  height: fit-content;
 
 }
 .back{
@@ -72,22 +85,17 @@ ul{
     height: 5%;
     width: 2.5%;
 }
-.nav-links{
 
-    display: flex;
-    align-items: center;
-    
+.navbar li{
+    flex: 1 1 auto; 
+  min-width: 100px; /* Adjust as needed */
+  box-sizing: border-box;
+ 
+  float: left;
+  list-style: none;
+   
+}
 
-}
-.nav-links li{
-    margin: 0 30px;
-    font-size: 30px;
-}
-.nav-links li:hover{
-    color: rgb(255, 251, 9);
-    text-decoration: underline;
-    cursor: pointer;
-}
 .menubtn{
     position: absolute;
     top: 30px;
@@ -110,6 +118,9 @@ section{
 
 
 }
+.title h1{
+    color: rgb(66, 66, 66);
+}
 .row{
     display: flex;
     justify-content: center;
@@ -117,10 +128,10 @@ section{
 }
 .col{
     width:325px;
-    background-color: rgb(32, 32, 32);
+    background-color: whitesmoke;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(26, 26, 26, 0.871);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.179);
     margin: 20px;
     transition: transform .2s;
     
@@ -133,11 +144,13 @@ section{
     height: auto;
 }
 .prodhead{
+    color: rgb(66, 66, 66);
     font-size: 3vmin;
     margin: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .para{
+    color: rgb(66, 66, 66);
     padding: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -153,7 +166,7 @@ section{
 }
 .enquirybtn{
     border: none;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(184, 186, 171);
     padding: 20px;
     width: 30vw;
     font-size: 20px;

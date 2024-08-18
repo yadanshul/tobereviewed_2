@@ -3,12 +3,18 @@
 //import hidbeforloginsign from "./privatecomponentviaHOC/privcomphoc";
 import { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
-
+import cardimg from "../../public/images/cardimg.jpg";
 import { useRouter } from "next/navigation";
 import Image from "next/image";//for image optimization
-import logo from '../../public/images/logo.png'
+import crophome from "../../public/images/crophome.jpg"
+import pe from "../../public/images/pe.jpg"
+import oa from '../../public/images/oa.jpg'
+import cf from "../../public/images/cf.jpg"
+import hc from "../../public/images/hc.jpg"
+import hg from "../../public/images/hg.jpg"
 //import Loader from './loading'; 
 import CircularIndeterminate from './loading';
+import Enquiry from "./enq/enquiry";
 function formtoggle(){
   const enqyirybtn = document.querySelector('.enqbutton');
   const form = document.querySelector('.sideform-enc');
@@ -33,44 +39,23 @@ export default function Home() {
     localStorage.removeItem("user");
     setSession(null);
     router.push("/");
-    router.refresh();  //not necessary
+    router.refresh();  
   }
   function signout () {
     localStorage.removeItem("user");
     setSession(null);
     router.push("/");
-    router.refresh();  //not necessary
+    router.refresh();  
   }
   
-  // const [courses, setcourses] = useState([]);
   const [token_to_dif_u_s, set_token_to_dif_u_s] = useState(null)
   const [session, setSession] = useState(null);
-  const [loading, setLoading] = useState(true); // this loading is for ssr loading 
-  // for csr like fetch requests we have to make some custom loadings 
-  // like if fetch request is in process we will make it true else false ;
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch("http://127.0.0.1:4000/home/");
-  //       if (!response.ok) {
-  //         alert("Failed to fetch courses")
-  //         router.push("/")
-  //       }
-  //       const data = await response.json();
-  //       setcourses(data.courses); 
-  //       // console.warn(data);
-  //     } catch (error) {
-  //       console.error("Error fetching courses:", error);
-  //     }
-  //   };
-    
-  //     fetchData();
-      
+  const [loading, setLoading] = useState(true); 
+ 
     
     
-  // }, []);
+
   const [name, setname] = useState(null);
-  // const [sellername, setsellername] = useState(null);
   const [company, setcompany] = useState(null);
   const [location, setlocation] = useState(null);
   const [email, setemail] = useState(null);
@@ -151,15 +136,9 @@ export default function Home() {
     document.getElementById("outlined-basic-4").value = "";
     document.getElementById("outlined-basic-5").value = "";
   }
-  // const session = localStorage.getItem("user");
   useEffect(() => {
     if (typeof window === 'undefined') {
-      //if window is undefined means ssr is running and not csr, so don't access localstorage
-      // and keep loading true
-      ////// but due to loading we wont get the ssr loaded page (which is the advantage of Next.js's ssr)   
-      ////// to get that advantage we have to remove loading logic but loading is good as ssr return generic data only if we use headers instead of cookies
-      ////// but if we will use cookies in upcomming modifications we will use ssr rendered pages instaed of loading page 
-    }else{
+     }else{
       user = localStorage.getItem("user");
       if (user) {
         setSession(JSON.parse(user)); // Assuming user is a JSON stringified object
@@ -170,43 +149,21 @@ export default function Home() {
     }
     
   
-    // explainantion
-
-    // useEffect(() => {
-    //   // effect logic
-    // }, []);
-    // The first argument is a function (the effect) that contains the logic you want to run.
-    // The second argument is an array of dependencies. An empty array [] means the effect runs only once, after the initial render.
-
-    // if (typeof window !== 'undefined') {
-    //   // client-side logic
-    // }
-    // typeof window !== 'undefined' is a check to determine if the code is running in a browser environment (client-side) rather than on the server.
-    // In server-side rendering (SSR) or during the initial server-side rendering in Next.js, window is not defined. This check ensures that the code inside the if block runs only on the client side.
-
-    // const user = localStorage.getItem("user");
-    // localStorage is a Web API available only in the browser.
-    // localStorage.getItem("user") retrieves the value associated with the key "user" from localStorage. If there is no such key, it returns null.
+   
 
 
-    // setSession(user);
-    // setSession is a state setter function returned by useState.
-    // It updates the session state variable with the value retrieved from localStorage.
-    // If a user is found in localStorage, session will be set to that value. Otherwise, it will be set to null.
-    
+
+
+
+
   },[]);
 
-  // if (loading) {
-  //   return <Loader />;  // Display the loading component while loading
-  // }
+  
 
 
   if (loading) {
-    return <CircularIndeterminate />;  // Display the loading component while loading
+    return <CircularIndeterminate />;  
   }
-
-
-  // console.warn(courses)
 
 
 
@@ -214,175 +171,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="sideform-enc">
-          <div className="sideform">  
-            <h3> Enquiry </h3>
-            <div className="form">
-                  <TextField
-                    className="muit1"
-                    idd="1"
-                    id="outlined-basic-1"
-                    label="Name"
-                    variant="outlined"
-                    type="text"
-                    // sx={{ input: { color: 'white' }, label: { color: 'white' } }}
-                    sx={{
-                      "& label.Mui-focused": {
-                        color: "white", // Change label color on focus
-                      },
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          borderColor: "white",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "white",
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "white", // Change border color on focus
-                        },
-                      },
-                      input: { color: "white" },
-                      label: { color: "white" },
-                    }}
-                    onChange={(e) => setname(e.target.value)}
-                  />
-
-                  <TextField
-                    className="muit1"
-                    idd="2"
-                    id="outlined-basic-2"
-                    label="Company"
-                    variant="outlined"
-                    type="text"
-                    // sx={{ input: { color: 'white' }, label: { color: 'white' } }}
-                    sx={{
-                      "& label.Mui-focused": {
-                        color: "white", // Change label color on focus
-                      },
-
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          borderColor: "white",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "white",
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "white", // Change border color on focus
-                        },
-                      },
-                      input: { color: "white" },
-                      label: { color: "white" },
-                    }}
-                    onChange={(e) => setcompany(e.target.value)}
-                  />
-                  <TextField
-                    className="muit1"
-                    idd="3"
-                    id="outlined-basic-3"
-                    label="Location"
-                    variant="outlined"
-                    type="text"
-                    // sx={{ input: { color: 'white' }, label: { color: 'white' } }}
-                    sx={{
-                      "& label.Mui-focused": {
-                        color: "white", // Change label color on focus
-                      },
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          borderColor: "white",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "white",
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "white", // Change border color on focus
-                        },
-                      },
-                      input: { color: "white" },
-                      label: { color: "white" },
-                    }}
-                    onChange={(e) => setlocation(e.target.value)}
-                  />
-                  <TextField
-                    className="muit1"
-                    idd="3"
-                    id="outlined-basic-4"
-                    label="E-mail"
-                    variant="outlined"
-                    type="text"
-                    // sx={{ input: { color: 'white' }, label: { color: 'white' } }}
-                    sx={{
-                      "& label.Mui-focused": {
-                        color: "white", // Change label color on focus
-                      },
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          borderColor: "white",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "white",
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "white", // Change border color on focus
-                        },
-                      },
-                      input: { color: "white" },
-                      label: { color: "white" },
-                    }}
-                    onChange={(e) => setemail(e.target.value)}
-                  />
-                  <TextField
-                    className="muit1"
-                    idd="3"
-                    id="outlined-basic-5"
-                    label="Querry"
-                    variant="outlined"
-                    type="text"
-                    // sx={{ input: { color: 'white' }, label: { color: 'white' } }}
-                    sx={{
-                      "& label.Mui-focused": {
-                        color: "white", // Change label color on focus
-                      },
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          borderColor: "white",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "white",
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "white", // Change border color on focus
-                        },
-                      },
-                      input: { color: "white" },
-                      label: { color: "white" },
-                    }}
-                    onChange={(e) => setquerry(e.target.value)}
-                  />
-            </div>
-            <div className="btns">
-              <div>
-                <button onClick={load}>
-                    upload
-                  </button>
-              </div>
-              <div>
-              <button onClick={resett}>
-                reset
-              </button>
-              </div>
-                  
-            </div>
-          </div>
-          <div className="enqbutton">
-                <button className="slide-btn" onClick={()=>{formtoggle()}}>
-                   Enquiry
-                </button>
-          </div>
-
-      </div>
-
+      <Enquiry/>
 
       <div className="main">
         <div className="nav">
@@ -393,51 +182,23 @@ export default function Home() {
                 style={{ fontFamily: "Open Sans", color: "white" }}
               >
                 {" "}
-                Oilcompxyz
+                FLB
               </h2>
               <p
                 className="cbheading"
                 style={{ fontFamily: "Open Sans", color: "white" }}
               >
                 {" "}
-                Researh abc{" "}
+                farmerlegacybiotech{" "}
               </p>
             </div>
             <ul className="ulhometop">
               <li>
-                {!session ? (
-                  <button
-                    className="btonhome"
-                    onClick={() => router.push("/login/users")}
-                  >
-                    login
-                  </button>
-                ) : (
-                  <button className="btonhome" onClick={logout}>
-                    logOut
-                  </button>
-                )}
-              </li>
-              <li>
-                {!session ? (
-                  <button
-                    className="btonhome"
-                    onClick={() => router.push("/signup/user")}
-                  >
-                    signup
-                  </button>
-                ) : (
-                  <button className="btonhome" onClick={signout}>
-                    signOut
-                  </button>
-                )}
-              </li>
-              <li>
                 <button
                   className="btonhome"
-                  onClick={() => router.push("/about")}
+                  onClick={() => router.push("/about2")}
                 >
-                  about
+                  About
                 </button>
               </li>
 
@@ -452,278 +213,234 @@ export default function Home() {
               <li>
                 <button
                   className="btonhome"
-                  onClick={() => router.push(`../contact`)}
+                  onClick={() => router.push(`../innovation`)}
                 >
-                  contact us
+                  Innovation
                 </button>
               </li>
               <li>
-                {session ? (
-                  <button
-                    className="btonhomeuser"
-                    onClick={() =>
-                      token_to_dif_u_s == "s"
-                        ? router.push(
-                            `../dataAfterSignupAndLogin/sellerdataafterSignedOrLoggedin/${session.id}`
-                          )
-                        : router.push(
-                            `../dataAfterSignupAndLogin/userdataafterSignedOrLoggedin/${session.id}`
-                          )
-                    }
-                  >
-                    {session.name}
-                  </button>
-                ) : (
-                  <></>
-                )}
+                <button
+                  className="btonhome"
+                  onClick={() => router.push(`../sustainablity`)}
+                >
+                  Sustainablity
+                </button>
               </li>
+              <li>
+                <button
+                  className="btonhome"
+                  onClick={() => router.push(`../p_e`)}
+                >
+                  Partners & investors
+                </button>
+              </li>
+              
+              <li>
+                <button
+                  className="btonhome"
+                  onClick={() => router.push(`../team`)}
+                >
+                  Team
+                </button>
+              </li>
+              
             </ul>
           </div>
         </div>
+
+        
+
         <div className="introheader">
-          <div className="card">
-            <p>
+          <div className="cardd">
+            <p className="ppp">
               FLB Introducing Brahmola for Better, Healthy and Sustainable World
             </p>
-          </div>
-        </div>
-      </div>
-      <div className="pagemain">
-        <div className="middleside">
-          <div className="data1">
-            <Image src={logo} className="logoimg"></Image>
-          </div>
-          <div className="data2">
-            <p>
-              {" "}
-              Farmer’s Legacy Biotech repurposed Canola “Brahmola” with the
-              goodness of Medium Chain Fatty Acid (MCFA) will provide
-              multi-functional Oil to North American Consumers Sustainably.{" "}
+            <p className="ppp">
+              We excel by challenging ourselves and by promoting human curiosity 
+            </p>
+            <p className="ppp">
+              INNOVATION BIOTECH COMPANY
             </p>
           </div>
         </div>
+
+        <div className="aboutushome">
+          <h1> About Us </h1>
+          <div className="cardcontainerhome1">
+            <div className="cardhome1">
+              <div className="cardcontenthome1">
+                <h3>Our Aim</h3>
+                <p>New challenges and using novel technologies</p>
+                <button onClick={()=>{router.push("/about2")}}> know more</button>
+                
+              </div>
+            </div>
+
+            <div className="cardhome2">
+              <div className="cardcontenthome2">
+                <h3> Our Purpose</h3>
+                <p>
+                  At Farmer’s Legacy Biotech, we are excited about the limitless
+                  possibility...
+                </p>
+                <button onClick={()=>{router.push("/about2")}}> know more</button>
+               
+              </div>
+            </div>
+
+            <div className="cardhome3">
+              <div className="cardcontenthome3">
+                <h3> Our Values</h3>
+                <p>Our values define our actions, and we lead by LEAP.</p>
+                <button onClick={()=>{router.push("/about2")}}> know more</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="info">
-        <div className="roww">
-          <div className="coll">
-            
+
+      <div className="pagemain">
+        <div className="middleside">
+          <div className="sustainablityhome">
+            <h1> Sustainablity </h1>
+            <div className="sustainablitycardcontainerhome">
+              <div className="sustainablitycardhome">
+                <Image
+                  src={cf}
+                  style={{ width: "100%", height: "auto" }}
+                ></Image>
+                <div className="sustainablitycardcontenthome">
+                  <h3 > Impact on Canadian Farmers</h3>
+                  <p>Farmer’s harvest cycle depends on the rotation of the crop, and few plants impact the health of other crops and the farm.</p>
+                  <a href="/sustainablity" className="btn">
+                    {" "}
+                    Read More
+                  </a>
+                </div>
+              </div>
+              <div className="sustainablitycardhome">
+                <Image
+                  src={hc}
+                  style={{ width: "100%", height: "auto" }}
+                ></Image>
+                <div className="sustainablitycardcontenthome">
+                  <h3 > Impact on Consumers</h3>
+                  <p>Our most of day to day products use for household and home care is based on non-renewable sources.</p>
+                  <a href="/sustainablity" className="btn">
+                    {" "}
+                    Read More
+                  </a>
+                </div>
+              </div>
+              <div className="sustainablitycardhome">
+                <Image
+                  src={hg}
+                  style={{ width: "100%", height: "auto" }}
+                ></Image>
+                <div className="sustainablitycardcontenthome">
+                  <h3 > Impact on forthcoming generations</h3>
+                  <p>We are looking for solutions that will able to reduce energy and resource consumption.</p>
+                  <a href="/sustainablity" className="btn">
+                    {" "}
+                    Read More
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
+          <div className="ourproductshome">
+            <h1> Our Products </h1>
+            <div className="rowhome">
+              <div className="cardcontainerourproductshome">
+                <div className="colhome">
+                  <Image src={crophome} className="crophome"></Image>
+                </div>
+                <div className="colhome2">
+                  <div>
+                    <button onClick={()=>{router.push("/products")}}> know more </button>
+                  </div>
+                  <p>
+                    {" "}
+                    Seeds: We will develop farm seeds that are optimum in
+                    agronomic and nutritional value properties. The seed
+                    products will find multiple applications. These numerous
+                    applications will able to diversify the current usage and
+                    reduce reliance on a few consumption patterns. We will be
+                    modifying the seeds with the latest technology routes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="partnersAndInversorshome">
+            <h1> Partners And Inversors </h1>
+            <div className="rowhome">
+              <div className="cardcontainerourproductshome">
+                <div className="colhome">
+                  <Image src={pe} className="crophome2"></Image>
+                </div>
+                <div className="colhome2">
+                <div>
+                    <button onClick={()=>{router.push("/p_e")}}> know more </button>
+                  </div>
+                  <div className="pt">
+                    <h2> Partners </h2>
+                  </div>
+                  <p>
+                    {" "}
+                    We are looking for partners who share similar values as that of ours. We are looking for expertise in plant breeding, seed multiplication, and seed marketing. We will be connecting with various partners as per the life cycle of our company. We are committed to be transparent in dealing with our partners and share the created value as per contribution to value creation.
+                  </p>
+                  <div className="inv">
+                    <h2> Investors </h2>
+                  </div>
+                  <p>
+                    {" "}
+                    We are looking for partners who share similar values as that of ours. We are looking for expertise in plant breeding, seed multiplication, and seed marketing. We will be connecting with various partners as per the life cycle of our company. We are committed to be transparent in dealing with our partners and share the created value as per contribution to value creation.
+                  </p>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div className="info">
+        <div className="roww">
+          <div className="colll1">
+            <h3>ABOUT US</h3>
+            <p>
+              Technology is evolving, so is the threat from global climate
+              change. New challenges and using novel technologies to solve these
+              challenges excite us at Farmer’s Legacy Biotech.
+            </p>
+          </div>
+         
+          <div className="colll3">
+            <h3>GET IN TOUCH</h3>
+            <div>
+              <p>info@farmerlegacybiotech.com</p>
+            </div>
+            <div>
+              <p>+1 (250) 891-6663</p>
+            </div>
+          </div>
+        </div>
+        <div className="linee"></div>
+        <div className="copyright">
+          <h2 className="cprt1">Copyright by </h2>
+
+          <h2 className="cprt">Canadian Legacy Biotech</h2>
+        </div>
       </div>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//2
-//ssr
-// async function fetchCourses() {
-//   const response = await fetch("http://127.0.0.1:4000/courses/");
-//   if (!response.ok) {
-//     throw new Error('Failed to fetch courses');
-//   }
-//   const data = await response.json();
-//   return data.courses;
-// }
-
-// export default async function CourseList() {
-//   const courses = await fetchCourses();
-
-//   return (
-    
-//     <div className="middleside">
-//       <div className="data">
-//         {courses.map((item) => (
-//           <div
-//             key={item.courseId}
-//             className="courses"
-//           >
-//             <div className="courseimage">
-//               <Image
-//                 className="imagecourse"
-//                 src={item.imglink}
-//                 width={120}
-//                 height={120}
-//               />
-//             </div>
-//             <div className="coursedetails">
-//               <h4 style={{ fontFamily: "nunito" }} className="h4name">
-//                 Course Name: {item.name}
-//               </h4>
-//               <p className="p2">
-//                 Course Cost:{" "}
-//                 <span style={{ color: "wheat" }} className="rsspan">
-//                   {item.cost} Rs
-//                 </span>
-//               </p>
-//               <p className="p3">Seller Name: {item.sellername} </p>
-//               <p className="p1" style={{ fontFamily: "Roboto" }}>
-//                 Course Id: {item.courseId}
-//               </p>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//3
-//ssr csr mixed
-// this is working completely fine as courses are loaded via server side 
-//but csr rendered right side is not visibe becouse it is dependent on middelside(ssr renderd ) 
-//so it is visible but bit destructured whe need redefinition of css 
-// we lost click on course functionality but we can impliment it via loading csr rendered buttons 
-// which will be mapped on each course with course id
-// so when ever the button will be clicked we willget to the course details
-
-
-
-// import Image from "next/image";
-// // import Home from "./home";
-// import dynamic from 'next/dynamic';
-// const Home = dynamic(() => import('./home'), { ssr: false });
-
-
-
-// async function fetchCourses() {
-//   const response = await fetch("http://127.0.0.1:4000/courses/");
-//   if (!response.ok) {
-//     throw new Error('Failed to fetch courses');
-//   }
-//   const data = await response.json();
-//   return data.courses;
-// }
-
-
-// export default async function CourseList() {
-  
-//   let courses = await fetchCourses();
-//   return (
-//     <div suppressHydrationWarning={true}>
-//           <div className="middleside">
-//           <div className="data">
-            
-//             {courses.map((item) => (
-//               <div
-//                 className="courses"
-//                 // onClick={() => router.push("/coursedetail/" + item.courseId)}
-//               >
-//                 <div className="courseimage">
-//                   {/* //one way */}
-//                   {/* <img className="imagecourse" src={item.imglink}
-//                                 width={100}
-//                                 height={100}
-                                
-//                                 /> */}
-//                   {/* //second way */}
-//                   <Image
-//                     className="imagecourse"
-//                     src={item.imglink}
-//                     width={120}
-//                     height={120}
-//                   />
-//                 </div>
-//                 <div className="coursedetails">
-//                   <h4 style={{ fontFamily: "nunito" }} className="h4name">
-//                     Course Name: {item.name}
-//                   </h4>
-//                   <p className="p2">
-//                     Course Cost:{" "}
-//                     <span style={{ color: "wheat" }} className="rsspan">
-//                       {" "}
-//                       {item.cost} Rs{" "}
-//                     </span>
-//                   </p>
-//                   <p className="p3">Seller Name: {item.sellername} </p>
-//                   <p className="p1" style={{ fontFamily: "Roboto" }}>
-//                     Course Id: {item.courseId}
-//                   </p>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-    
-        
-//         <Home suppressHydrationWarning={true}/>
-      
-
-//     </div>
-    
-//   );
-// }
-
-
-
-
-
 
 
 

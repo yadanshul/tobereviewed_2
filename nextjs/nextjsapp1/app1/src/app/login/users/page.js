@@ -57,7 +57,7 @@ const loginStudent = () => {
                         borderColor: "black",
                       },
                       "&:hover fieldset": {
-                        borderColor: "white",
+                        borderColor: "grey",
                       },
                       "&.Mui-focused fieldset": {
                         borderColor: "white", // Change border color on focus

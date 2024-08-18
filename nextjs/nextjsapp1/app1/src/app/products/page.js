@@ -8,6 +8,7 @@ import oilll from "../../../public/images/oilll.jpg";
 import back from "../../../public/images/back.png";
 import { useRouter } from "next/navigation";
 import "./products.css";
+import Enquiry from "../enq/enquiry";
 const Product = () => {
 function navtoggle(){
     const menubtn = document.querySelector('.menubtn');
@@ -26,17 +27,81 @@ function navtoggle(){
 const router=useRouter();
   return (
     <div className="main">
-      {/* <nav className="navbar">
-        <h1 className="logo">what ever client wnat</h1>
+      <Enquiry/>
+      <nav className="navbar">
+            <div className="divhome2" id="inner2">
+              <h2
+                className="cheading"
+                style={{ fontFamily: "Open Sans", color: "white" }}
+              >
+                {" "}
+                FLB
+              </h2>
+              <p
+                className="cbheading"
+                style={{ fontFamily: "Open Sans", color: "white" }}
+              >
+                {" "}
+                farmerlegacybiotech{" "}
+              </p>
+            </div>
         
-        <ul className="nav-links">
-          <li>link 1</li>
-          <li>link 2</li>
-          <li>link 3</li>
-          <li>link 3</li>
-        </ul>
-        <Image src={menu} className="menubtn" alt="Menu button" onClick={navtoggle} />
-      </nav> */}
+          <ul >
+              <li>
+                  <button
+                    className="btonhome"
+                    onClick={() => router.push("/")}
+                  >
+                    Home
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="btonhome"
+                    onClick={() => router.push("/about2")}
+                  >
+                    About
+                  </button>
+                </li>
+                
+                <li>
+                  <button
+                    className="btonhome"
+                    onClick={() => router.push(`../innovation`)}
+                  >
+                    Innovation
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="btonhome"
+                    onClick={() => router.push(`../sustainablity`)}
+                  >
+                    Sustainablity
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="btonhome"
+                    onClick={() => router.push(`../p_e`)}
+                  >
+                    Partners & investors
+                  </button>
+                </li>
+                
+                
+                <li>
+                <button
+                  className="btonhome"
+                  onClick={() => router.push(`../team`)}
+                >
+                  Team
+                </button>
+              </li>
+                
+              </ul>
+        {/* <Image src={menu} className="menubtn" alt="Menu button" onClick={navtoggle} /> */}
+      </nav>
       <div className="header">
         <div className="headercontent">
           <h2>Products we are offering</h2>
@@ -87,11 +152,46 @@ const router=useRouter();
             </div>
             
         </div>
-        <div className="enquirybtndiv">
+        {/* <div className="enquirybtndiv">
               <button className="enquirybtn"onClick={()=>{router.push("../contact")}}>
                 Enquiry
               </button>
+            </div> */}
+
+
+            <div className="info">
+            <div className="roww">
+              <div className="colll1">
+                  <h3>ABOUT US</h3>
+                  <p >Technology is evolving, so is the threat from global climate change. New challenges and using novel technologies to solve these challenges excite us at Farmer’s Legacy Biotech.</p>
+                  
+              </div>
+              {/* <div className="colll2">
+              <h3>IMPORTANT LINKS</h3>
+                  <p>Technology is evolving, so is the threat from global climate change. New challenges and using novel technologies to solve these challenges excite us at Farmer’s Legacy Biotech.</p>
+                 
+              </div> */}
+              <div className="colll3">
+              <h3>GET IN TOUCH</h3>
+              <div>
+                <p>info@farmerlegacybiotech.com</p>
+              </div>
+              <div>
+              <p>+1 (250) 891-6663</p>
+              </div>
+                  
+                  
+              </div>
             </div>
+            <div className="linee">
+
+            </div>
+            <div className="copyright">
+                  <h2 className="cprt1">Copyright by </h2> 
+                  
+                  <h2 className="cprt">Canadian Legacy Biotech</h2>
+            </div>
+          </div>
 
     </div>
   );
